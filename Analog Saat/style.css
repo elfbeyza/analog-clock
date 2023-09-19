@@ -1,0 +1,86 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background:url("jaime-serrano-ziDTXxEO_Vo-unsplash.jpg");
+	background-size: cover; 
+}
+
+.clock{
+	width: 500px;
+	height: 500px;
+	position: relative;
+	background-color:rgba(255,255,255,0.22);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0px 0px 10px rgba(255,255,255,0.30), 0px 0px 20px rgba(0,0,0,0.9);
+}
+
+.number{
+	transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+	inset: 10px;
+	text-align: center;
+	font-size: 40px;
+	color: black;
+	text-shadow: 3px 3px 3px 3px rgba(0,0,0.01);
+	display:inline-block;
+	
+}
+
+.number b{
+	transform: rotate(calc(-30deg*var(--n)));
+	display:inline-block;
+}
+
+.center-dot{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-color: black;
+	border-radius: 50%;
+}
+
+.hour-hand, .minute-hand, .second-hand{ 
+	--rotate: 0;
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%) rotate(calc(var(--rotate)*1deg));
+	transform-origin: bottom;
+}
+
+.hour-hand{
+	width: 10px;
+	height: 130px;
+	background: #2F4858;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+.minute-hand{
+	width:  10px;
+	height: 190px;
+	background-color: #2F4858;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+ 
+.second-hand{
+	width: 5px;
+	height: 210px;
+	background-color: #A7293F;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+
+
+
